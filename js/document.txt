@@ -1,0 +1,2 @@
+// 可直接在浏览器上修改内容
+document.body.contentEditable=true

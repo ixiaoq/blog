@@ -1,0 +1,30 @@
+Window screen
+window.screen.width 返回当前屏幕宽度(分辨率值) 
+window.screen.height 返回当前屏幕高度(分辨率值) 
+
+window.document.body.offsetHeight; 返回当前网页高度（内容撑开的，如果没有内容，为0） 
+window.document.body.offsetWidth; 返回当前网页宽度
+
+
+
+window.document.documentElement.clientHeight 浏览器窗口高度
+window.document.documentElement.clientWidth  浏览器窗口宽度
+
+
+滚动条 
+document.body.scrollTop   //chrome
+document.documentElement.scrollTop   //FF IE 
+
+
+window.location
+window.location.href='http://www.baidu.com/' 页面跳转
+window.location.reload()  页面重载
+
+window History
+window.history.go(1) 前进（跳转）
+window.history.go(-1) 后退（跳转）
+window.history.forward() 前进
+window.history.back() 后退
+
+window.navigator.userAgent  浏览器类型、版本、操作系统类型、浏览器引擎类型等信息
+

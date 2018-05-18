@@ -1,0 +1,5 @@
+ERROR in ./src/main.ts
+Module build failed: TypeError: Cannot read property 'afterCompile' of undefined“错误。
+
+解决方法
+将ts-loader从4.0降低到3.1.1解决问题。是由于webpack和ts-loader版本不兼容造成的。
