@@ -118,15 +118,23 @@ git reflog
 // 选择一个commit，合并进当前分支
 git cherry-pick [commit]
 ```
-#### 回滚
+#### 回滚某次的提交
 ```sh
-git reset HEAD file  回滚指定文件
-git rest --hard HEAD^：回退到上一版；
-git rest --hard HEAD~100：回退到 100次提交之前；
-git rest --hard 3628164：回退到commit id为3628164的版本
+// 回滚指定文件
+git reset HEAD file
+// 回退到上一版
+git rest --hard HEAD^
+// 回退到 100次提交之前
+git rest --hard HEAD~100
+// 回退到commit id为3628164的版本
+git rest --hard 3628164
+// 撤销某次操作
 git revert <commitid>
-git status
-git stash save
+```
+#### git stash 来暂存文件
+```sh
+// 执行存储时，添加备注，方便查找。
+git stash save "message"
 // 查看当前stash中的内容
 git stash list
 // 将当前stash中的内容弹出，并应用到当前分支对应的工作目录上。
@@ -134,6 +142,8 @@ git stash list
 git stash pop
 // 将堆栈中的内容应用到当前目录，不会将内容从堆栈中删除，适应于多个分支的情况
 git stash apply
+// 删除所有缓存的stash
+git stash clear 
 ```
 #### 标签（tag）
 ```sh
