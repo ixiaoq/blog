@@ -1,13 +1,16 @@
 
 # git 常用命令
 > Workspace：工作区
+
 >  Index / Stage：暂存区
+  
 >  Repository：仓库区（或本地仓库）
+  
 >  Remote：远程仓库（github）
 
 #### 初始化代码库
-``` js
-// 在当前目录新建一个 Git 代码库
+``` sh
+// 在当前目录新建一个 Git 代码库
 git init
 // 新建一个目录，将其初始化为 Git 代码库
 git init [project-name]
