@@ -18,7 +18,7 @@ git init [project-name]
 git clone [url]
 ```
 #### 配置
-``` js
+``` sh
 // 显示当前的Git配置
 git config --list
 // 设置提交代码时的用户信息
@@ -27,7 +27,7 @@ git config [--global] user.email "[email address]"
 ```
 
 #### 增加/删除文件
-```js
+```sh
 // 添加指定文件到暂存区
 git add [file1] [file2] ...
 // 添加指定目录到暂存区，包括子目录
@@ -45,7 +45,7 @@ git rm --cached [file]
 git mv [file-original] [file-renamed]
 ```
 #### 代码提交
-```js
+```sh
 // 提交暂存区到仓库区
 git commit -m [message]
 // 提交暂存区的指定文件到仓库区
@@ -63,7 +63,7 @@ git commit --amend -m [message]
 git commit --amend [file1] [file2] ...
 ```
 #### 远程同步（remote）
-```js
+```sh
 // 下载远程仓库的所有变动
 git fetch [remote]
 // 显示所有远程仓库
@@ -82,7 +82,7 @@ git push [remote] --force
 git push [remote] --all
 ```
 #### 分支（branch）
-```js
+```sh
 // 常设分支: master 和 develop
 // 临时分支：功能（feature）、预发布（release）、修补bug（fixbug）
 //     这三种分支都属于临时性需要，使用完以后，应该删除，使得代码库的常设分支始终只有Master和Develop。
@@ -119,7 +119,7 @@ git reflog
 git cherry-pick [commit]
 ```
 #### 回滚
-```js
+```sh
 git reset HEAD file  回滚指定文件
 git rest --hard HEAD^：回退到上一版；
 git rest --hard HEAD~100：回退到 100次提交之前；
@@ -136,7 +136,7 @@ git stash pop
 git stash apply
 ```
 #### 标签（tag）
-```js
+```sh
 // 列显已有的标签
 git tag
 // 列显指定标签详情
@@ -157,7 +157,7 @@ git checkout -b [branchname] [tagname]
 例：git checkout -b version2 v2.0.0
 ```
 #### 查看信息
-```js
+```sh
 // 显示有变更的文件
 git status
 // 显示当前分支的版本历史
