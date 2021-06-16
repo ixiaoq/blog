@@ -37,7 +37,7 @@ git config [--global] user.name "[name]"
 git config [--global] user.email "[email address]"
 ```
 
-### 增加/删除文件
+### git add（增加/删除文件）
 
 添加指定文件到暂存区
 ```sh
@@ -52,12 +52,11 @@ git add [dir]
 git add .
 ```
 添加每个变化前，都会要求确认
-```
+
 对于同一个文件的多处变化，可以实现分次提交
 ```sh
 git add -p
 ```
-``` sh
 删除工作区文件，并且将这次删除放入暂存区
 ```sh
 git rm [file1] [file2] ...
@@ -71,7 +70,7 @@ git rm --cached [file]
 git mv [file-original] [file-renamed]
 ```
 
-### 代码提交
+### git commit（代码提交）
 
 提交暂存区到仓库区
 ```sh
@@ -94,7 +93,7 @@ git commit -a -m [message]
 git commit -v
 ```
 使用一次新的commit，替代上一次提交
-```
+
 如果代码没有任何新变化，则用来改写上一次commit的提交信息
 ```sh
 git commit --amend -m [message]
@@ -104,7 +103,7 @@ git commit --amend -m [message]
 git commit --amend [file1] [file2] ...
 ```
 
-### 远程同步（remote）
+### git remote（远程同步）
 
 下载远程仓库的所有变动
 ```sh
@@ -138,7 +137,7 @@ git push [remote] --force
 ```sh
 git push [remote] --all
 
-### 分支（branch）
+### branch（分支）
 
 常设分支: master 和 develop
 
@@ -209,7 +208,7 @@ git reflog
 git cherry-pick [commit]
 ```
 
-### 回滚某次的提交
+### 回滚/撤销某次的提交
 
 回滚指定文件
 ```sh
@@ -232,7 +231,7 @@ git rest --hard 3628164
 git revert <commitid>
 ```
 
-### git stash 来暂存文件
+### git stash（暂存文件）
 
 执行存储时，添加备注，方便查找。
 ```sh
@@ -257,7 +256,7 @@ git stash apply
 git stash clear 
 ```
 
-### 标签（tag）
+### git tag（标签）
 
 列显已有的标签
 ```sh
