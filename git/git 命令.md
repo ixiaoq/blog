@@ -208,6 +208,11 @@ git reflog
 git cherry-pick [commit]
 ```
 
+选择一个commit，合并进当前分支
+```sh
+git remote rename <old-name> <new-name>
+```
+
 ### 回滚/撤销某次的提交
 
 回滚指定文件
