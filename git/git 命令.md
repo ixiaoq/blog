@@ -205,6 +205,12 @@ git reflog
 ```sh
 git cherry-pick [commit]
 ```
+分支重命名
+```sh
+git remote rename [old-name] [new-name]
+```
+
+
 
 ### 回滚/撤销某次的提交
 
