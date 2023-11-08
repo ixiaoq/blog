@@ -86,7 +86,7 @@ git commit -a
 ```
 跳过使用暂存区域
 ```sh
-git commit -a -m [message]
+git commit -am [message]
 ```
 提交时显示所有diff信息
 ```sh
@@ -98,9 +98,9 @@ git commit -v
 ```sh
 git commit --amend -m [message]
 ```
-重做上一次commit，并包括指定文件的新变化
+文件补充重做上一次commit
 ```sh
-git commit --amend [file1] [file2] ...
+git commit --amend
 ```
 
 ### git remote（远程同步）
@@ -195,9 +195,7 @@ git branch -d [branch-name]
 ```
 删除远程分支
 ```sh
-git push origin --delete [branch-name]
-```sh
-git branch -dr [remote/branch]
+git push origin --delete [branch]
 ```
 显示当前分支的最近几次提交
 ```sh
@@ -208,32 +206,37 @@ git reflog
 git cherry-pick [commit]
 ```
 
-选择一个commit，合并进当前分支
-```sh
-git remote rename <old-name> <new-name>
-```
-
 ### 回滚/撤销某次的提交
 
+> --soft：撤销后保留修改  --hard：撤销后不保留修改
+
+撤销某次操作（保留修改)
+```sh
+git reset --soft <commitid>
+```
 回滚指定文件
 ```sh
 git reset HEAD file
 ```
-回退到上一版
+回退到上一版（保留修改）
 ```sh
-git rest --hard HEAD^
+git reset HEAD^
 ```
-回退到 100次提交之前
+回退到 10次提交之前（不保留修改）
 ```sh
-git rest --hard HEAD~100
+git reset --hard HEAD~10
 ```
-回退到commit id为3628164的版本
+回退到commit id为3628164的版本（不保留修改）
 ```sh
-git rest --hard 3628164
+git reset --hard 3628164
 ```
-撤销某次操作
+撤销某次操作（不保留修改)
 ```sh
 git revert <commitid>
+```
+将本地的状态回退到和远程的一样 
+```sh
+git reset --hard origin/master
 ```
 
 ### git stash（暂存文件）
